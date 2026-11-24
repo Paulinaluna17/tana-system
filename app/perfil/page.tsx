@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { requireSession, homeFor } from "@/lib/auth";
 import { PageHeader } from "@/components/ui";
 import { ProfileForm } from "@/components/misc/profile-form";
+import { PasswordForm } from "@/components/misc/password-form";
 
 export const metadata = { title: "Mi perfil" };
 
@@ -15,6 +16,7 @@ export default async function Perfil() {
       </Link>
       <PageHeader title="Mi perfil" subtitle={s.email} />
       <ProfileForm initial={{ full_name: s.profile.full_name ?? "", notify_email: s.profile.notify_email, weekly_digest: s.profile.weekly_digest }} />
+      <PasswordForm />
     </main>
   );
 }

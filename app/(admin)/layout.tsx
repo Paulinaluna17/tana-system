@@ -27,7 +27,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </NavLink>
           </nav>
           <NotificationBell />
-          <Link href="/perfil" className="hidden size-10 items-center justify-center rounded-xl hover:bg-ink/5 sm:inline-flex" aria-label={`Perfil de ${s.profile.full_name ?? s.email}`}>
+          <Link href="/perfil" className="inline-flex size-10 items-center justify-center rounded-xl hover:bg-ink/5" aria-label={`Perfil de ${s.profile.full_name ?? s.email}`}>
             <UserCircle className="size-5" />
           </Link>
           <form action={signOut}>

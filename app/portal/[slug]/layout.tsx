@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, Home, LogOut, Receipt, Sparkles, BookOpen, ArrowLeft } from "lucide-react";
+import { CalendarDays, Home, LogOut, Receipt, Sparkles, BookOpen, ArrowLeft, UserCircle } from "lucide-react";
 import { requireWorkspace } from "@/lib/auth";
 import { brandCssVars, googleFontsHref } from "@/lib/brand";
 import { NavLink } from "@/components/shell/nav-link";
@@ -47,6 +47,9 @@ export default async function PortalLayout({
           </Link>
           <span className="flex-1" />
           <NotificationBell href={`/notificaciones?ws=${slug}`} />
+          <Link href="/perfil" className="inline-flex size-10 items-center justify-center rounded-xl hover:bg-ink/5" aria-label="Mi perfil">
+            <UserCircle className="size-5" />
+          </Link>
           {session && (
             <form action={signOut}>
               <button className="inline-flex size-10 items-center justify-center rounded-xl hover:bg-ink/5" aria-label="Salir">
