@@ -4,19 +4,20 @@
 
 /* Identidad de Tana Studio (panel admin). Los portales de clientes sobreescriben estas variables. */
 :root {
-  --bg: 250 247 242;
+  /* Tana: bordó #7e1624 sobre crema #f6f3ef */
+  --bg: 246 243 239;
   --surface: 255 255 255;
-  --ink: 28 25 23;
-  --muted: 112 104 97;
-  --line: 231 225 216;
-  --accent: 165 76 52;
-  --accent-ink: 255 255 255;
+  --ink: 43 29 31;
+  --muted: 116 101 103;
+  --line: 230 221 214;
+  --accent: 126 22 36;
+  --accent-ink: 246 243 239;
   --ok: 21 128 61;
   --warn: 180 83 9;
   --danger: 185 28 28;
   --info: 29 78 216;
   --font-body: "Inter";
-  --font-heading: "Fraunces";
+  --font-heading: "Inter";
   color-scheme: light;
 }
 

@@ -1,4 +1,6 @@
-import { Body, Button, Container, Head, Heading, Html, Preview, Section, Text } from "@react-email/components";
+import { Body, Button, Container, Head, Heading, Html, Img, Preview, Section, Text } from "@react-email/components";
+
+const logoBase = process.env.APP_URL ?? "";
 
 export function NotificationEmail({
   title,
@@ -19,9 +21,10 @@ export function NotificationEmail({
     <Html lang="es">
       <Head />
       <Preview>{title}</Preview>
-      <Body style={{ background: "#FAF7F2", fontFamily: "Inter, Arial, sans-serif", color: "#1C1917" }}>
+      <Body style={{ background: "#F6F3EF", fontFamily: "Inter, Arial, sans-serif", color: "#2B1D1F" }}>
         <Container style={{ maxWidth: 520, margin: "24px auto", background: "#fff", borderRadius: 16, padding: 28 }}>
-          <Text style={{ fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "#706861", margin: 0 }}>
+          <Img src={`${logoBase}/brand/tana-logo.png`} alt="Tana Studio" height="44" style={{ marginBottom: 12 }} />
+          <Text style={{ fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "#746567", margin: 0 }}>
             {brandName}
           </Text>
           <Heading style={{ fontSize: 22, margin: "8px 0 12px" }}>{title}</Heading>
@@ -35,7 +38,7 @@ export function NotificationEmail({
               Abrir en el calendario
             </Button>
           </Section>
-          <Text style={{ fontSize: 12, color: "#706861" }}>
+          <Text style={{ fontSize: 12, color: "#746567" }}>
             Hecho por Tana Studio · Podés desactivar estos emails desde tu perfil.
           </Text>
         </Container>

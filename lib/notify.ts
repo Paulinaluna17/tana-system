@@ -48,7 +48,7 @@ export async function dispatchPendingEmails(limit = 50): Promise<{ sent: number;
         body: n.body ?? "",
         ctaUrl: `${appUrl()}${n.link ?? "/"}`,
         brandName: n.workspaces?.name ?? "Tana Studio",
-        color: n.workspaces?.brand?.primary ?? "#A54C34",
+        color: "#7E1624",
         name: p.full_name ?? "",
       }),
     );

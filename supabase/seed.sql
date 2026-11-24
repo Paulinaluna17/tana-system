@@ -384,21 +384,21 @@ insert into public.workspace_services (workspace_id, service_id, custom_name, de
  'Planificación, dirección creativa e indicaciones de grabación. La producción audiovisual en el lugar la hace el equipo de Roma.',
  array['4 posts/carruseles con indicaciones y copy','4 reels con guion e indicaciones de grabación','16 historias planificadas (4 por semana)','Diseño de las piezas gráficas del feed','2 rondas de cambios por pieza'],
  array['Grabación en el gimnasio','Edición de reels (servicio aparte)','Pauta publicitaria','Respuesta de mensajes'],
- 180000, 'mensual', 'activo', '2026-09-01', 10, 'Se paga del 1 al 10 de cada mes. Precio actualizable cada 3 meses.'),
+ 180000, 'mensual', 'activo', '2026-09-01', 24, 'Se paga el día 24 de cada mes. Precio actualizable cada 3 meses.'),
 ('c0000000-0000-4000-8000-000000000001', 'f0000000-0000-4000-8000-000000000004', null, null,
  array['Edición con subtítulos','Música con licencia','1 ronda de cambios'], array['Grabación'],
  25000, 'por_pieza', 'propuesto', null, null, 'Se puede sumar cuando quieran: se cobra por reel editado.'),
 ('c0000000-0000-4000-8000-000000000001', 'f0000000-0000-4000-8000-000000000005', null, null,
  array['Respuestas de lunes a viernes','Reporte mensual de consultas'], array['Atención fines de semana'],
- 110000, 'mensual', 'inactivo', null, 10, null),
+ 110000, 'mensual', 'inactivo', null, 24, null),
 ('c0000000-0000-4000-8000-000000000002', 'f0000000-0000-4000-8000-000000000001', 'Planificación y dirección de contenido',
  'Ideas, objetivos, dirección de arte y aclaraciones de cada pieza del mes.',
  array['6 a 8 posts por mes','2 reels por mes (cada 15 días)','5 historias por semana planificadas','Dirección de arte','2 rondas de cambios por pieza'],
  array['Sesión de fotos','Contratación de modelo','Pauta publicitaria'],
- 160000, 'mensual', 'activo', '2026-09-14', 5, 'Se paga del 1 al 5 de cada mes.'),
+ 160000, 'mensual', 'activo', '2026-09-14', 2, 'Se paga el día 2 de cada mes.'),
 ('c0000000-0000-4000-8000-000000000002', 'f0000000-0000-4000-8000-000000000003', null, null,
  array['Diseño de posts y carruseles del mes','Placas para historias'], array['Sesión de fotos'],
- 60000, 'mensual', 'activo', '2026-10-01', 5, null),
+ 60000, 'mensual', 'activo', '2026-10-01', 2, null),
 ('c0000000-0000-4000-8000-000000000002', 'f0000000-0000-4000-8000-000000000007', null, 'Ideal para la colección de verano.',
  array['Hasta 30 fotos editadas','Dirección de arte'], array['Contratación de modelo','Alquiler de locación'],
  150000, 'unico', 'propuesto', null, null, null),
@@ -408,12 +408,12 @@ insert into public.workspace_services (workspace_id, service_id, custom_name, de
 
 -- Cuotas: octubre (pagada), noviembre (Roma pagada / Las Popas vencida), diciembre (pendiente)
 insert into public.invoices (workspace_id, period, items, amount, due_date, paid_at, method, auto_generated) values
-('c0000000-0000-4000-8000-000000000001', '2026-10-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-10-10', pg_temp.ar('2026-10-08 11:00'), 'Transferencia', true),
-('c0000000-0000-4000-8000-000000000001', '2026-11-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-11-10', pg_temp.ar('2026-11-09 16:20'), 'Transferencia', true),
-('c0000000-0000-4000-8000-000000000001', '2026-12-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-12-10', null, null, true),
-('c0000000-0000-4000-8000-000000000002', '2026-10-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-10-05', pg_temp.ar('2026-10-04 10:00'), 'Mercado Pago', true),
-('c0000000-0000-4000-8000-000000000002', '2026-11-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-11-05', null, null, true),
-('c0000000-0000-4000-8000-000000000002', '2026-12-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-12-05', null, null, true);
+('c0000000-0000-4000-8000-000000000001', '2026-10-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-10-24', pg_temp.ar('2026-10-22 11:00'), 'Transferencia', true),
+('c0000000-0000-4000-8000-000000000001', '2026-11-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-11-24', pg_temp.ar('2026-11-20 16:20'), 'Transferencia', true),
+('c0000000-0000-4000-8000-000000000001', '2026-12-01', '[{"name":"Planificación mensual de contenidos","amount":180000}]', 180000, '2026-12-24', null, null, true),
+('c0000000-0000-4000-8000-000000000002', '2026-10-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-10-02', pg_temp.ar('2026-10-01 10:00'), 'Mercado Pago', true),
+('c0000000-0000-4000-8000-000000000002', '2026-11-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-11-02', null, null, true),
+('c0000000-0000-4000-8000-000000000002', '2026-12-01', '[{"name":"Planificación y dirección de contenido","amount":160000},{"name":"Diseño de piezas gráficas","amount":60000}]', 220000, '2026-12-02', null, null, true);
 
 -- Ideas y plantillas de pieza
 insert into public.idea_bank (workspace_id, title, notes, pillar_id, content_type_id) values

@@ -13,10 +13,8 @@ export default async function PrintBudget({ params }: { params: Promise<{ slug: 
     <div className="mx-auto max-w-4xl bg-white p-8 text-ink">
       <PrintButton />
       <header className="mb-6 flex items-center justify-between gap-4 border-b border-line pb-4">
-        <div>
-          <p className="font-display text-3xl font-semibold">Tana</p>
-          <p className="text-[10px] uppercase tracking-[0.3em] text-muted">Studio</p>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/brand/tana-logo.png" alt="Tana Studio" className="h-14 w-auto" />
         <div className="text-right">
           <p className="font-display text-xl font-semibold">Resumen de servicios y pagos</p>
           <p className="text-sm text-muted">

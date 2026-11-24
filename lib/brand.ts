@@ -44,6 +44,7 @@ export const FONT_OPTIONS = [
   "Playfair Display",
   "Cormorant Garamond",
   "Fraunces",
+  "Jost",
   "Libre Baskerville",
   "Bebas Neue",
   "Oswald",

@@ -12,8 +12,8 @@ export default async function LoginPage({
     <main className="flex min-h-screen items-center justify-center px-4 py-10">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <p className="font-display text-4xl font-semibold tracking-tight">Tana</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.3em] text-muted">Studio</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/tana-logo.png" alt="Tana Studio" className="mx-auto h-28 w-auto" />
           <p className="mt-4 text-sm text-muted">Calendario de contenidos, aprobaciones y presupuesto.</p>
         </div>
         {error && (

@@ -22,7 +22,7 @@ export function NavLink({
       aria-current={active ? "page" : undefined}
       className={cn(
         "inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-3 py-2 text-sm transition [&_svg]:size-4",
-        active ? "bg-ink text-bg" : "text-muted hover:bg-ink/5 hover:text-ink",
+        active ? "bg-accent text-accent-ink" : "text-muted hover:bg-ink/5 hover:text-ink",
         className,
       )}
     >
