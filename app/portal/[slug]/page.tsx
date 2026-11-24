@@ -57,7 +57,7 @@ export default async function PortalHome({ params }: { params: Promise<{ slug: s
     .gt("created_at", lastSeen ?? "1970-01-01")
     .neq("actor_id", session.userId);
   const ym = currentYearMonth();
-  const firstName = (session.profile.full_name ?? "").split(/[\s(]/)[0];
+  const firstName = (session.profile.full_name ?? "").split("(")[0].trim();
 
   return (
     <div className="space-y-6">
